@@ -1,8 +1,8 @@
-package com.developer.cyxtera.testcyxteralibrary.features.login.features.login.ui;
+package com.developer.cyxtera.testcyxteralibrary.features.login.ui;
 
-import com.developer.cyxtera.testcyxteralibrary.features.login.features.login.LoginContract;
-import com.developer.cyxtera.testcyxteralibrary.features.login.features.login.data.entities.User;
-import com.developer.cyxtera.testcyxteralibrary.features.login.features.login.domain.LoginInteractor;
+import com.developer.cyxtera.testcyxteralibrary.features.login.LoginContract;
+import com.developer.cyxtera.testcyxteralibrary.features.login.data.entities.User;
+import com.developer.cyxtera.testcyxteralibrary.features.login.domain.LoginInteractor;
 
 import java.util.Date;
 import java.util.regex.Pattern;

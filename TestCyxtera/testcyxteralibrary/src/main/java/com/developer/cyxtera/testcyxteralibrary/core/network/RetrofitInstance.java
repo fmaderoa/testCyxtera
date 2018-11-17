@@ -1,4 +1,4 @@
-package com.developer.cyxtera.testcyxtera.core.network;
+package com.developer.cyxtera.testcyxteralibrary.core.network;
 
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;

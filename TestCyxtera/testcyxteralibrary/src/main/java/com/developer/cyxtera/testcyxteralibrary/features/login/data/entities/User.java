@@ -1,4 +1,4 @@
-package com.developer.cyxtera.testcyxteralibrary.features.login.features.login.data.entities;
+package com.developer.cyxtera.testcyxteralibrary.features.login.data.entities;
 
 public class User {
 

@@ -1,8 +1,10 @@
-package com.developer.cyxtera.testcyxteralibrary.features.login.features.login.domain.usecases.validate;
+package com.developer.cyxtera.testcyxteralibrary.features.login.domain.usecases.validate;
 
-import com.developer.cyxtera.testcyxteralibrary.features.login.features.login.data.LoginData;
-import com.developer.cyxtera.testcyxteralibrary.features.login.features.login.data.entities.User;
-import com.developer.cyxtera.testcyxteralibrary.features.login.features.login.domain.LoginInteractor;
+
+import com.developer.cyxtera.testcyxteralibrary.features.login.data.LoginData;
+import com.developer.cyxtera.testcyxteralibrary.features.login.data.entities.User;
+import com.developer.cyxtera.testcyxteralibrary.features.login.domain.LoginInteractor;
+
 
 public class ValidateLogin implements LoginInteractor.Validate, LoginData.LogIn.LogInDataSourceCallback {
 
@@ -18,12 +20,12 @@ public class ValidateLogin implements LoginInteractor.Validate, LoginData.LogIn.
 
     @Override
     public void userInfoSaved() {
-
+        callback.userInfoSaved();
     }
 
     @Override
     public void onError(String error) {
-
+        callback.onError(error);
     }
 
     @Override
@@ -33,6 +35,6 @@ public class ValidateLogin implements LoginInteractor.Validate, LoginData.LogIn.
 
     @Override
     public void validateUser(User user) {
-
+        logInDataSource.validateUser(user);
     }
 }

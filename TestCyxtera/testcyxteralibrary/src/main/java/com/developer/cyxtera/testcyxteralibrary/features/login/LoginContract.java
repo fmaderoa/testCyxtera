@@ -1,6 +1,6 @@
-package com.developer.cyxtera.testcyxteralibrary.features.login.features.login;
+package com.developer.cyxtera.testcyxteralibrary.features.login;
 
-import com.developer.cyxtera.testcyxteralibrary.features.login.features.login.data.entities.User;
+import com.developer.cyxtera.testcyxteralibrary.features.login.data.entities.User;
 
 import java.util.Date;
 

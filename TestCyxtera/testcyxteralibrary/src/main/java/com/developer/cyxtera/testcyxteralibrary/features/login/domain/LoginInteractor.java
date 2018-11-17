@@ -1,6 +1,6 @@
-package com.developer.cyxtera.testcyxteralibrary.features.login.features.login.domain;
+package com.developer.cyxtera.testcyxteralibrary.features.login.domain;
 
-import com.developer.cyxtera.testcyxteralibrary.features.login.features.login.data.entities.User;
+import com.developer.cyxtera.testcyxteralibrary.features.login.data.entities.User;
 
 public interface LoginInteractor {
 

@@ -1,6 +1,6 @@
-package com.developer.cyxtera.testcyxteralibrary.features.login.features.login.data;
+package com.developer.cyxtera.testcyxteralibrary.features.login.data;
 
-import com.developer.cyxtera.testcyxteralibrary.features.login.features.login.data.entities.User;
+import com.developer.cyxtera.testcyxteralibrary.features.login.data.entities.User;
 
 public interface LoginData {
 
@@ -10,6 +10,7 @@ public interface LoginData {
 
         void saveLogUser(User user);
 
+        void validateUser(User user);
 
         interface LogInDataSourceCallback {
 
