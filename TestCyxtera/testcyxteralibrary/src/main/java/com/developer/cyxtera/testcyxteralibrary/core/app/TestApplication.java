@@ -11,14 +11,14 @@ import com.developer.cyxtera.testcyxteralibrary.core.database.greendao.DaoSessio
 
 public class TestApplication extends Application {
 
-    private DaoSession mDaoSession;
+    public static DaoSession mDaoSession;
 
     @Override
     public void onCreate() {
         super.onCreate();
         if(mDaoSession == null) {
             mDaoSession = new DaoMaster(
-                    new DaoMaster.DevOpenHelper(this, "greendao_demo.db").getWritableDb()).newSession();
+                    new DaoMaster.DevOpenHelper(this, "cyxtera_demo.db").getWritableDb()).newSession();
         }
     }
 

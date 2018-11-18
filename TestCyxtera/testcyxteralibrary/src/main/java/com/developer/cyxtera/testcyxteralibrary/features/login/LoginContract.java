@@ -8,9 +8,12 @@ public interface LoginContract {
 
     interface View{
 
+
+
         void onSyncError(String error);
 
-        void onSyncSuccess();
+        void onSuccess();
+
 
 
 
@@ -21,7 +24,7 @@ public interface LoginContract {
 
         boolean validateData(User user);
 
-
+        void validateUser();
 
         void saveNewLogInData(String user, Date dateRegister, int codResult);
     }

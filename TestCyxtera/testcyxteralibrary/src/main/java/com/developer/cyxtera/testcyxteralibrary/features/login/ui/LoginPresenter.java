@@ -1,5 +1,7 @@
 package com.developer.cyxtera.testcyxteralibrary.features.login.ui;
 
+import android.content.Context;
+
 import com.developer.cyxtera.testcyxteralibrary.features.login.LoginContract;
 import com.developer.cyxtera.testcyxteralibrary.features.login.data.entities.User;
 import com.developer.cyxtera.testcyxteralibrary.features.login.domain.LoginInteractor;
@@ -11,6 +13,7 @@ public class LoginPresenter implements LoginContract.Presenter, LoginInteractor.
 
     private User userLog;
     private LoginInteractor.Validate validate;
+
 
     public LoginPresenter(LoginInteractor.Validate validate) {
         this.validate = validate;
@@ -31,12 +34,20 @@ public class LoginPresenter implements LoginContract.Presenter, LoginInteractor.
         String password =  user.getPassword();
         if (email != null && !email.isEmpty() && patternEmail.matcher(email).matches())
             if (password != null && !password.isEmpty() && patternPassword.matcher(password).matches()) {
-                validate.validateUser(user);
+                userLog = new User();
+                userLog.setEmail(email);
+                userLog.setPassword(password);
                 return true;
             }
 
         return false;
     }
+
+    @Override
+    public void validateUser() {
+        validate.validateUser(userLog);
+    }
+
 
     @Override
     public void saveNewLogInData(String user, Date dateRegister, int codResult) {

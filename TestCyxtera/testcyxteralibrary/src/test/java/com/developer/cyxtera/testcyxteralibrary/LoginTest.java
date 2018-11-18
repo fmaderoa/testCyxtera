@@ -1,7 +1,10 @@
 package com.developer.cyxtera.testcyxteralibrary;
 
-import com.developer.cyxtera.testcyxteralibrary.features.login.features.login.data.entities.User;
-import com.developer.cyxtera.testcyxteralibrary.features.login.features.login.ui.LoginPresenter;
+import com.developer.cyxtera.testcyxteralibrary.features.login.data.entities.User;
+import com.developer.cyxtera.testcyxteralibrary.features.login.data.loginrepository.LoginRepository;
+import com.developer.cyxtera.testcyxteralibrary.features.login.domain.LoginInteractor;
+import com.developer.cyxtera.testcyxteralibrary.features.login.domain.usecases.validate.ValidateLogin;
+import com.developer.cyxtera.testcyxteralibrary.features.login.ui.LoginPresenter;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -15,7 +18,7 @@ public class LoginTest {
 
     @Before
     public void setUp() throws Exception {
-        loginPresenter = new LoginPresenter();
+        loginPresenter = new LoginPresenter(new ValidateLogin(new LoginRepository()));
     }
 
     @Test
@@ -63,6 +66,13 @@ public class LoginTest {
         user.setEmail(email);
         user.setPassword(password);
         return user;
+    }
+
+    @Test
+    public void validateLoginUser() {
+        String usuario = "famara@gmail.com";
+        String password = "Famara*2523";
+        loginPresenter.validateUser();
     }
 
 }
