@@ -31,8 +31,8 @@ public class LoginRepository implements LoginData.LogIn {
 
     @Override
     public void validateUser(User user) {
-        boolean validUser = false;
-        Query query = new Query(TestApplication.mDaoSession);
+        boolean validUser;
+        Query query = new Query(TestApplication.getDaoSession());
         validUser = query.userValid(user);
         if(validUser) {
             callback.userInfoSaved();
