@@ -8,6 +8,7 @@
     <uses-permission android:name="android.permission.READ_CONTACTS" />
 
     <application
+        android:name="com.developer.cyxtera.testcyxteralibrary.core.app.TestApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
@@ -22,7 +23,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".features.login.query.features.login.ui.LoginActivity"
+            android:name=".features.login.ui.LoginActivity"
             android:label="@string/title_activity_login"></activity>
     </application>
 

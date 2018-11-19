@@ -1,4 +1,4 @@
-package com.developer.cyxtera.testcyxtera.features.login.query.features.login.ui;
+package com.developer.cyxtera.testcyxtera.features.login.ui;
 
 import android.animation.Animator;
 import android.animation.AnimatorListenerAdapter;
