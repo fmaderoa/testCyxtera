@@ -1,4 +1,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.developer.cyxtera.testcyxteralibrary" />
+    package="com.developer.cyxtera.testcyxteralibrary" >
 
+<application
+android:name=".core.app.TestApplication">
+</application>
 
+</manifest>

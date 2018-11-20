@@ -1,8 +1,8 @@
 package com.developer.cyxtera.testcyxteralibrary;
 
+import com.developer.cyxtera.testcyxteralibrary.core.database.greendao.DaoSession;
 import com.developer.cyxtera.testcyxteralibrary.features.login.data.entities.User;
 import com.developer.cyxtera.testcyxteralibrary.features.login.data.loginrepository.LoginRepository;
-import com.developer.cyxtera.testcyxteralibrary.features.login.domain.LoginInteractor;
 import com.developer.cyxtera.testcyxteralibrary.features.login.domain.usecases.validate.ValidateLogin;
 import com.developer.cyxtera.testcyxteralibrary.features.login.ui.LoginPresenter;
 
@@ -71,7 +71,9 @@ public class LoginTest {
     @Test
     public void validateLoginUser() {
         String usuario = "famara@gmail.com";
-        String password = "Famara*2523";
+        String password = "java1ABC$";
+        loginPresenter.validateData(createUser(usuario,password));
+        DaoSession mDaoSession = null;
         loginPresenter.validateUser();
     }
 

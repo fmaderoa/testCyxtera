@@ -4,7 +4,6 @@ import android.database.sqlite.SQLiteDatabase;
 
 import com.developer.cyxtera.testcyxteralibrary.core.database.greendao.DaoMaster;
 import com.developer.cyxtera.testcyxteralibrary.core.database.greendao.DaoSession;
-import com.developer.cyxtera.testcyxteralibrary.core.database.greendao.UserDB;
 import com.developer.cyxtera.testcyxteralibrary.core.database.greendao.UserDBDao;
 import com.developer.cyxtera.testcyxteralibrary.features.login.data.entities.User;
 import com.developer.cyxtera.testcyxteralibrary.features.login.data.loginrepository.LoginRepository;
